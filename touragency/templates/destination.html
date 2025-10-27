@@ -56,6 +56,8 @@
               <p class="card-text">Days: {{ tour.no_of_days }}</p>
               <p class="card-text text-success fw-bold">Price: ${{ tour.price }}</p>
               <a href="#" class="btn btn-primary">Book Now</a>
+              <a href="{% url 'tour_update' tour.id %}" class="btn btn-warning btn-sm">Edit</a>
+              <a href="{% url 'tour_delete' tour.id %}" class="btn btn-danger btn-sm">Delete</a>
             </div>
           </div>
         </div>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  {% block title %}Delete Tour{% endblock %}
+</head>
+<body>
+{% block content %}
+
+<div class="card shadow p-4 text-center">
+    <h3 class="mb-4 text-danger">Delete "{{ book.title }}"?</h3>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        <a href="{% url 'destination' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
+
+
+</body>
+</html>
